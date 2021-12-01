@@ -13,6 +13,13 @@ variable "access_user" {
   description = "grantee user"
 }
 
+variable "create_role" {
+  type    = bool
+  default = false
+
+  description = "create db access role"
+}
+
 variable "access_map" {
   type = object({
     table_rights    = list(string)
@@ -21,4 +28,6 @@ variable "access_map" {
     database_rights = list(string)
     }
   )
+
+  description = "granted rights for role"
 }

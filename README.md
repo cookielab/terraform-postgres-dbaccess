@@ -27,13 +27,15 @@ No modules.
 | [postgresql_grant.schema](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.14.0/docs/resources/grant) | resource |
 | [postgresql_grant.sequence](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.14.0/docs/resources/grant) | resource |
 | [postgresql_grant.tables](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.14.0/docs/resources/grant) | resource |
+| [postgresql_role.access_role](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.14.0/docs/resources/role) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_map"></a> [access\_map](#input\_access\_map) | n/a | <pre>object({<br>    table_rights    = list(string)<br>    sequence_rights = list(string)<br>    schema_rights   = list(string)<br>    database_rights = list(string)<br>    }<br>  )</pre> | n/a | yes |
+| <a name="input_access_map"></a> [access\_map](#input\_access\_map) | granted rights for role | <pre>object({<br>    table_rights    = list(string)<br>    sequence_rights = list(string)<br>    schema_rights   = list(string)<br>    database_rights = list(string)<br>    }<br>  )</pre> | n/a | yes |
 | <a name="input_access_user"></a> [access\_user](#input\_access\_user) | grantee user | `string` | n/a | yes |
+| <a name="input_create_role"></a> [create\_role](#input\_create\_role) | create db access role | `bool` | `false` | no |
 | <a name="input_db_name"></a> [db\_name](#input\_db\_name) | database name | `string` | n/a | yes |
 | <a name="input_db_owner"></a> [db\_owner](#input\_db\_owner) | database owner | `string` | n/a | yes |
 
